@@ -1,5 +1,6 @@
 import React from 'react'
 import {PropTypes} from "prop-types"
+import {Link} from 'react-router-dom'
 function UserItem({user:{ login, avatar_url}}) {
   return (
     <div className='card shadow-md compact side bg-base-100'>
@@ -12,9 +13,10 @@ function UserItem({user:{ login, avatar_url}}) {
                 </div>
             </div>
             <div>
+                <h2 className='card-title'>{login}</h2>
+                <Link className='underline text-black-600' to={`/users/${login}`}>Visit profile</Link>
             </div>
         </div>
-        {login}
     </div>
   )
 }
