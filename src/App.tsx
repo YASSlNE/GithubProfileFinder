@@ -6,10 +6,11 @@ import About from './components/pages/About.jsx'
 import NotFound from './components/pages/NotFound.jsx'
 
 import Footer from './components/layout/Footer.jsx'
-
+import { GithubProvider } from './context/GithubContext';
 import { any } from 'prop-types';
 function App() {
   return (
+    <GithubProvider>
     <Router>
       <div className="flex flex-col justify-between h-screen">
         <Navbar title="Github Profile Finder" />
@@ -24,6 +25,7 @@ function App() {
         <Footer/>
       </div>
     </Router>
+    </GithubProvider>
   );
 }
 
