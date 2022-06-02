@@ -6,7 +6,7 @@ import About from './components/pages/About.jsx'
 import NotFound from './components/pages/NotFound.jsx'
 
 import Footer from './components/layout/Footer.jsx'
-import { GithubProvider } from './context/GithubContext';
+import { GithubProvider } from './context/github/GithubContext';
 import { any } from 'prop-types';
 function App() {
   return (
